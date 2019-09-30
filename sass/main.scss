@@ -1,7 +1,30 @@
-h1 {
-    color: orange;
+@import "sections/header";
+@import "sections/advantages";
+@import "sections/agent";
+@import "sections/client";
+@import "sections/footer";
+@import "sections/form";
+@import "sections/manage";
+@import "sections/map";
+@import "sections/price";
+@import "sections/scheme";
+@import "sections/work";
+
+
+
+html {
+    box-sizing: border-box;
+    font-size: 12px;
 }
 
-h2 {
-    color: green;
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    page-break-after: 0;
+    font-family: 'Roboto', sans-serif;
 }
