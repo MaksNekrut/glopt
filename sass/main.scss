@@ -1,3 +1,16 @@
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+
+@mixin flexColumns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @import "sections/header";
 @import "sections/advantages";
 @import "sections/agent";
@@ -12,9 +25,17 @@
 
 
 
+:root {
+    --color-brown: #333;
+    --color-white: #fff;
+}
+
+
+
+
 html {
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 62.5%;
 }
 
 *,

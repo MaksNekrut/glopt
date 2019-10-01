@@ -1,0 +1,27 @@
+.advantages {
+    background: rgb(243, 243, 243);
+    &__inner {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        .advantages__title {
+            width: 100%;
+            text-align: center;
+            font-size: 2.6rem;
+            padding: 3rem 0;
+            text-transform: uppercase;
+        }
+        .advantages__items {
+            @include flexRow;
+        }
+        .advantages__items_left-group,
+        .advantages__items_right-group {
+            @include flexColumns;
+            width: 50%;
+            .advantages__items_left,
+            .advantages__items_right {
+                @include flexRow;
+            }
+        }
+    }
+}

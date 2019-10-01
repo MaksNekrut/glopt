@@ -9,29 +9,81 @@
     &__info {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        
         .logo_main {
             margin: 2rem 0;
-            flex: 1;
+            flex-basis: 10%;
+            
         }
-        nav {
-            .nav__list {
+        .nav {
+            display: flex;
+            flex-direction: row;
+            flex-basis: 60%;
+            justify-content: space-evenly;
+            &__list {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                list-style: none;
                 display: flex;
                 flex-direction: row;
-                list-style: none;
-                flex: 4;
+                justify-content: space-evenly;
+            }
+            &__list > *:not(:nth-child(6)) {
+                border-right: 1px solid var(--color-brown);
+                padding-right: 2rem;
             }
         }
         .phone {
-            flex: 1;
+            flex-basis: 15%;
         }
         .button {
-            flex: 1;
+            flex-basis: 15%;
         }
     }
     &__titles {
+        color: var(--color-white);
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &_top {
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+        &_central {
+            font-size: 7.2rem;
+            color: rgb(236, 100, 75);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        &_bottom {
+            font-size: 4.2rem;
+            text-transform: uppercase;
+        }
     }
     &__variants {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .variants__items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .variants__items > * + * {
+            margin: 1.5rem 0;
+        }
+    }
+    &__button {
+        widht: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .button_main {
+            margin: 1.5rem auto;
+        }
     }
 }

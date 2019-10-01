@@ -1,0 +1,19 @@
+.scheme {
+    background-color: var(--color-white);
+    &__inner {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        @include flexColumns;
+    }
+    &__title {
+        padding: 3rem 1rem 2rem 1rem;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+    }
+    &__items {
+        @include flexRow;
+    }
+}
