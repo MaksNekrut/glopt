@@ -1,6 +1,18 @@
 .header {
     background: url("../img/header-bg.png") no-repeat 50% 50%;
     background-size: cover;
+    position: relative;
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../img/header-bg-overlay.png") no-repeat 50% 50%;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
     &__inner {
         position: relative;
         width: 1200px;
@@ -29,6 +41,13 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+                font-size: 1.5rem;
+                color: var(--color-white);
+            }
+            &__list > *:hover {
+                color: var(--color-main);
+                transition: all .5s;
+                cursor: pointer;
             }
             &__list > *:not(:nth-child(6)) {
                 border-right: 1px solid var(--color-brown);
@@ -37,11 +56,37 @@
         }
         .phone {
             flex-basis: 15%;
+            &__text {
+                color: var(--color-white);
+                font-size: 1.4rem;
+                text-align: end;
+            }
+            &__number {
+                color: var(--color-white);
+                font-size: 1.9rem;
+                text-align: end;
+            }
         }
         .button {
             flex-basis: 15%;
+            &_main {
+                color: var(--color-white);
+                font-size: 1.3rem;
+                padding: 1.8rem 2.3rem;
+                background-color: var(--color-main);
+                outline: none;
+                border-radius: 30px;
+                text-transform: uppercase;
+                &-top {
+                    padding: 1.8rem 2.3rem;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
         }
     }
+    
+    
     &__titles {
         color: var(--color-white);
         display: flex;
@@ -54,7 +99,7 @@
         }
         &_central {
             font-size: 7.2rem;
-            color: rgb(236, 100, 75);
+            color: var(--color-main);
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -63,27 +108,76 @@
             text-transform: uppercase;
         }
     }
+    &__decorate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4.2rem 0;
+        .decorate_left {
+            flex-basis: 37%;
+            height: 2px;
+            color: var(--color-white);
+            margin: 0;
+            padding: 0;
+        }
+        .decorate_right {
+            flex-basis: 37%;
+            height: 2px;
+            color: var(--color-white);
+            margin: 0;
+            padding: 0;
+        }
+        .decorate_circle {
+            flex-basis: 1%;
+            height: 12px;
+            background-color: var(--color-white);
+            margin: 0;
+            padding: 0;
+            border-radius: 50%;
+            margin: 0 2rem;
+        }
+    }
     &__variants {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-basis: 25%;
+        align-items: baseline;
         .variants__items {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            .variants__text {
+                font-size: 1.6rem;
+                color: var(--color-white);
+                text-align: center;
+                padding: 1.5rem 1rem;
+                margin: 0; 
+            }
         }
         .variants__items > * + * {
             margin: 1.5rem 0;
         }
     }
     &__button {
-        widht: 100%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        .button_main {
-            margin: 1.5rem auto;
+        .button_main-bottom {
+            margin: 4.2rem 0 6rem 0;
+            color: var(--color-white);
+            font-size: 1.3rem;
+            padding: 2.3rem 4.8rem;
+            background-color: var(--color-main);
+            outline: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
         }
+
     }
 }

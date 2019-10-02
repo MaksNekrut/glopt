@@ -23,6 +23,55 @@
         }
         &__items {
         @include flexColumns;
+        border: 1px solid var(--color-brown);
+        justify-content: space-between;
+        }
+        &__items > * + * {
+            margin-bottom: 1.5rem;
+        }
+        &__items:not(:nth-child(4)) {
+            margin-right: 2rem;
+        }
+        &__title {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            background-color: var(--color-bg-title);
+            width:99.5%;
+            height: 6.2rem;
+            color: var(--color-white);
+            padding: 2.2rem 5.6rem;
+            text-align: center;
+        }
+        &__logo {
+
+        }
+        &__days {
+            font-size: 1.6rem;
+        }
+        &__price {
+            font-size: 2rem;
+            color: var(--color-main);
+        }
+        &__text {
+            font-size: 1.4rem;
+            text-align: center;
+            font-weight: 300;
+        }
+        &__button {
+            
+            font-size: 1.3rem;
+            padding: 1.8rem 2.3rem;
+            background-color: var(--color-main);
+            outline: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            &_bottom {
+                background-color: var(--color-main);
+                border: none;
+                color: var(--color-white);
+            }
         }
     }
     &__form {

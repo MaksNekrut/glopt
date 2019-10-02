@@ -21,6 +21,21 @@
         @include flexRow;
         .examples__inner {
             @include flexColumns;
+            padding: 3rem 0 5rem 0;
+            width: 36rem;
+            & > :nth-child(2) {
+                color: var(--color-main);
+                font-size: 1.8rem;
+                margin-top: 2rem;
+                font-weight: bold;
+            }
+            &-item {
+                margin: .5rem 0;
+                font-size: 1.6rem;
+                text-align: justify;
+                font-weight: 300;
+                line-height: 2.2rem;
+            }            
         }
     }
 }

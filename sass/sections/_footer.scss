@@ -1,0 +1,9 @@
+.footer {
+    background: var(--color-bg-title);
+    color: var(--color-white);
+    &__inner {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+    }
+}

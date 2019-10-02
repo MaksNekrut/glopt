@@ -1,5 +1,5 @@
 .advantages {
-    background: rgb(243, 243, 243);
+    background: var(--color-bg-grey);
     &__inner {
         position: relative;
         width: 1200px;
@@ -10,6 +10,7 @@
             font-size: 2.6rem;
             padding: 3rem 0;
             text-transform: uppercase;
+            font-weight: bold;
         }
         .advantages__items {
             @include flexRow;
@@ -18,10 +19,30 @@
         .advantages__items_right-group {
             @include flexColumns;
             width: 50%;
+            justify-content: flex-start;
+            margin-top: 2rem;
+            margin-bottom: 6rem;
             .advantages__items_left,
             .advantages__items_right {
                 @include flexRow;
+                justify-content: space-around;
+                .advantages__item-logo {
+                    padding-top: 1rem;
+                }
+                .advantages__info {
+                    margin-bottom: 3rem;
+                    margin-left: 1.5rem;
+                    .advantages__item-title {
+                        color: var(--color-main);
+                        font-size: 1.6rem;
+                        margin-bottom: 1rem;
+                        font-weight: bold;
+                    }
+                    .advantages__item-text {
+                        font-size: 1.6rem;
+                    }
             }
+        }
         }
     }
 }

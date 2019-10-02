@@ -1,5 +1,5 @@
 .scheme {
-    background-color: var(--color-white);
+    background-color: var(--color-bg-grey);
     &__inner {
         position: relative;
         width: 1200px;
@@ -15,5 +15,36 @@
     }
     &__items {
         @include flexRow;
+        padding-bottom: 3rem;
+        &_bottom {
+            width: 70%;
+            .scheme__item {
+                flex-basis: 33.33333%;
+            }
+        }
+        &_top {
+            .scheme__item {
+                flex-basis: 25%;
+            }
+        }
+    }
+    &__item {
+        @include flexColumns;
+        font-size: 1.4rem;
+        padding: 0 2rem;
+        justify-content: stretch;
+        &-logo {
+
+        }
+        &-title {
+            color: var(--color-main);
+        }
+        &-text {
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+    &__item > * + * {
+        margin-bottom: 1.5rem;
     }
 }
