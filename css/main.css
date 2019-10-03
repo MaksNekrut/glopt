@@ -263,6 +263,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    .client__slider .slider__item .slider__img img {
+      border-radius: 50%; }
 
 .footer {
   background: var(--color-bg-title);
@@ -270,7 +272,44 @@
   .footer__inner {
     position: relative;
     width: 1200px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .footer__inner-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid grey; }
+      .footer__inner-top .footer__logo {
+        flex-basis: 10%; }
+      .footer__inner-top .footer__title {
+        flex-basis: 60%; }
+      .footer__inner-top .footer__phone-text {
+        flex-basis: 15%; }
+      .footer__inner-top .footer__phone-number {
+        flex-basis: 15%; }
+    .footer__inner-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem; }
+      .footer__inner-bottom .footer-bottom__copyright {
+        flex-basis: 10%; }
+      .footer__inner-bottom .footer-bottom__text {
+        flex-basis: 80%; }
+      .footer__inner-bottom .footer-bottom__logo {
+        flex-basis: 10%; }
+        .footer__inner-bottom .footer-bottom__logo > * {
+          display: inline-block; }
 
 .question-form {
   background: url("../../img/form-bg.png");
@@ -284,11 +323,89 @@
     background: url("../img/header-bg-overlay.png") no-repeat 50% 50%;
     background-size: cover;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    opacity: 0.5; }
   .question-form__inner {
     position: relative;
-    width: 1200px;
-    margin: 0 auto; }
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 6rem; }
+  .question-form__inner-overlay {
+    background: url("../../img/form-overlay.png") no-repeat 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .question-form__header {
+    color: var(--color-white);
+    background-color: var(--color-bg-title);
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .question-form__title {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1.5rem; }
+  .question-form__subtitle {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 1.5rem; }
+  .question-form__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; }
+    .question-form__content input {
+      flex-basis: 30%;
+      margin-top: 1.5rem;
+      padding: 1.8rem 0 1.8rem 2.2rem;
+      border-radius: 3rem;
+      border: 1px solid var(--color-form);
+      background-color: var(--color-white);
+      font-family: 'Roboto', sans-serif;
+      color: var(--color-form);
+      font-weight: 300; }
+    .question-form__content input:nth-child(1) {
+      margin-left: 3rem; }
+    .question-form__content input:nth-child(3) {
+      margin-right: 3rem; }
+    .question-form__content textarea {
+      flex-basis: 100%;
+      margin: 1.5rem 3rem 1.5rem 3rem;
+      padding-left: 2.2rem;
+      padding-top: 1.8rem;
+      background-color: var(--color-white);
+      font-family: 'Roboto', sans-serif;
+      border-radius: 10px;
+      border: 0.5px solid var(--color-form);
+      color: var(--color-form);
+      font-weight: 300;
+      max-height: 8rem;
+      max-width: 100%; }
+  .question-form__button {
+    background-color: var(--color-main);
+    border: 1px solid var(--color-main);
+    margin: 1rem 0 3rem 0;
+    border-radius: 30px; }
+    .question-form__button button {
+      padding: 1.3rem 2.3rem;
+      cursor: pointer;
+      background-color: var(--color-main);
+      color: var(--color-white);
+      font-size: 1.3rem;
+      border-radius: 30px;
+      text-transform: uppercase;
+      border: none;
+      outline: none; }
 
 .manage {
   background: url("../img/manage-bg.png") no-repeat 50% 50%;
@@ -480,7 +597,8 @@
   --color-white: #fff;
   --color-main: rgb(236, 100, 75);
   --color-bg-title: rgb(37,51,60);
-  --color-bg-grey: rgb(243, 243, 243); }
+  --color-bg-grey: rgb(243, 243, 243);
+  --color-form: #b1afa9; }
 
 html {
   box-sizing: border-box;

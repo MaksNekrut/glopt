@@ -5,5 +5,46 @@
         position: relative;
         width: 1200px;
         margin: 0 auto;
+        @include flexColumns;
+        &-top {
+            @include flexRow;
+            width: 100%;
+            align-items: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid grey;
+            .footer__logo{
+                flex-basis: 10%;
+            
+            }
+            .footer__title{
+                flex-basis: 60%;
+            }
+            .footer__phone-text{
+                flex-basis: 15%;
+            }
+            .footer__phone-number{
+                flex-basis: 15%;
+            }
+        }
+        &-bottom {
+            @include flexRow;
+            width: 100%;
+            align-items: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            .footer-bottom__copyright {
+                flex-basis: 10%;
+            }
+            .footer-bottom__text {
+                flex-basis: 80%;
+            }
+            .footer-bottom__logo {
+                flex-basis: 10%;
+                & > * {
+                    display: inline-block;
+                }
+            }
+        }
     }
 }

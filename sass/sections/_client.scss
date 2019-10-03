@@ -19,5 +19,13 @@
     }
     &__slider {
         @include flexRow;
+        .slider__item {
+            .slider__img {
+                img {
+                    border-radius: 50%;
+                }
+                
+            }
+        }
     }
 }
