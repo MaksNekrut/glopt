@@ -78,6 +78,78 @@
         &-inner {
             @include flexColumns;
         }
+        &-title {
+            padding: 3rem 1rem 2rem 1rem;
+            font-size: 2.6rem;
+            text-align: center;
+            font-weight: 400;
+        }
+        fieldset {
+            margin: 3rem 1rem 8rem 1rem;
+            position: relative;
+            width: 100%;
+            .price__form-logo {
+                width: 8rem;
+                height: 8rem;
+                border: 1px solid var(--color-main);
+                border-radius: 50%;
+                margin: 0 auto;
+                img {
+                    margin-left: .8rem;
+                    margin-top: .5rem;
+                }
+            }
+            .price__form-btnOverlay {
+                width: 20rem;
+                background-color: var(--color-white);
+                z-index: 1;
+                position: absolute;
+                left: 50rem;
+                bottom: -2.8rem;
+                .price__form-button {
+                    width: 18rem;
+                    background-color: var(--color-main);
+                    z-index: 2;
+                    border: 1px solid transparent;
+                    border-radius: 30px;
+                    margin: 0 auto;
+                    button {
+                        margin-left: .7rem;
+                        background-color: var(--color-main);
+                        color: var(--color-white);
+                        border: 1px solid transparent;
+                        border-radius: 30px;
+                        font-size: 1.4rem;
+                        padding: 1.8rem 2.2rem;
+                    }
+                }
+            }
+        }
+        &-inputs {
+            margin-top: 5rem;
+            margin-bottom: 8rem;
+            form {
+                @include flexRow;
+                input {
+                    flex-basis: 25%;
+                    height: 5rem;
+                    border: 1px solid transparent;
+                    border-radius: 30px;
+                    color: var(--color-main);
+                    padding-left: 1.5rem;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+            }
+            form > :nth-child(1) {
+                margin-left: 14rem;
+            }
+            form > :nth-child(3) {
+                margin-right: 14rem;
+            }
+        }
 
-    }
+        
+     }
+
 }

@@ -13,6 +13,7 @@
             padding-top: 3rem;
             padding-bottom: 3rem;
             border-bottom: 1px solid grey;
+            font-size: 1.4rem;
             .footer__logo{
                 flex-basis: 10%;
             
@@ -33,16 +34,27 @@
             align-items: center;
             padding-top: 3rem;
             padding-bottom: 3rem;
+            font-size: 1.4rem;
             .footer-bottom__copyright {
                 flex-basis: 10%;
             }
             .footer-bottom__text {
                 flex-basis: 80%;
+                a {
+                    text-decoration: none;
+                    color: var(--color-main);
+                    margin-left: 5rem;
+                }
             }
             .footer-bottom__logo {
-                flex-basis: 10%;
+                flex-basis: 15%;
                 & > * {
                     display: inline-block;
+                }
+                &-text {
+                    vertical-align: middle;
+                    padding-bottom: 2rem;
+                    margin-right: 1rem;
                 }
             }
         }

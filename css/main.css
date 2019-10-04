@@ -263,8 +263,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .client__slider .slider__item .slider__img img {
-      border-radius: 50%; }
+    .client__slider .slider__item {
+      margin: 5rem 2rem 6rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .client__slider .slider__item .slider__img {
+        margin-bottom: 2rem; }
+      .client__slider .slider__item .slider__name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem; }
+      .client__slider .slider__item .slider__text {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        font-weight: 300;
+        text-align: justify; }
+      .client__slider .slider__item .slider__img img {
+        border-radius: 50%; }
 
 .footer {
   background: var(--color-bg-title);
@@ -285,7 +302,8 @@
       align-items: center;
       padding-top: 3rem;
       padding-bottom: 3rem;
-      border-bottom: 1px solid grey; }
+      border-bottom: 1px solid grey;
+      font-size: 1.4rem; }
       .footer__inner-top .footer__logo {
         flex-basis: 10%; }
       .footer__inner-top .footer__title {
@@ -301,15 +319,24 @@
       width: 100%;
       align-items: center;
       padding-top: 3rem;
-      padding-bottom: 3rem; }
+      padding-bottom: 3rem;
+      font-size: 1.4rem; }
       .footer__inner-bottom .footer-bottom__copyright {
         flex-basis: 10%; }
       .footer__inner-bottom .footer-bottom__text {
         flex-basis: 80%; }
+        .footer__inner-bottom .footer-bottom__text a {
+          text-decoration: none;
+          color: var(--color-main);
+          margin-left: 5rem; }
       .footer__inner-bottom .footer-bottom__logo {
-        flex-basis: 10%; }
+        flex-basis: 15%; }
         .footer__inner-bottom .footer-bottom__logo > * {
           display: inline-block; }
+        .footer__inner-bottom .footer-bottom__logo-text {
+          vertical-align: middle;
+          padding-bottom: 2rem;
+          margin-right: 1rem; }
 
 .question-form {
   background: url("../../img/form-bg.png");
@@ -509,6 +536,66 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+  .price__form-title {
+    padding: 3rem 1rem 2rem 1rem;
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 400; }
+  .price__form fieldset {
+    margin: 3rem 1rem 8rem 1rem;
+    position: relative;
+    width: 100%; }
+    .price__form fieldset .price__form-logo {
+      width: 8rem;
+      height: 8rem;
+      border: 1px solid var(--color-main);
+      border-radius: 50%;
+      margin: 0 auto; }
+      .price__form fieldset .price__form-logo img {
+        margin-left: .8rem;
+        margin-top: .5rem; }
+    .price__form fieldset .price__form-btnOverlay {
+      width: 20rem;
+      background-color: var(--color-white);
+      z-index: 1;
+      position: absolute;
+      left: 50rem;
+      bottom: -2.8rem; }
+      .price__form fieldset .price__form-btnOverlay .price__form-button {
+        width: 18rem;
+        background-color: var(--color-main);
+        z-index: 2;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        margin: 0 auto; }
+        .price__form fieldset .price__form-btnOverlay .price__form-button button {
+          margin-left: .7rem;
+          background-color: var(--color-main);
+          color: var(--color-white);
+          border: 1px solid transparent;
+          border-radius: 30px;
+          font-size: 1.4rem;
+          padding: 1.8rem 2.2rem; }
+  .price__form-inputs {
+    margin-top: 5rem;
+    margin-bottom: 8rem; }
+    .price__form-inputs form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .price__form-inputs form input {
+        flex-basis: 25%;
+        height: 5rem;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        color: var(--color-main);
+        padding-left: 1.5rem;
+        font-size: 1.4rem;
+        font-weight: 700; }
+    .price__form-inputs form > :nth-child(1) {
+      margin-left: 14rem; }
+    .price__form-inputs form > :nth-child(3) {
+      margin-right: 14rem; }
 
 .scheme {
   background-color: var(--color-bg-grey); }
