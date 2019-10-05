@@ -1,0 +1,28 @@
+.map {
+    background: var(--color-bg-title);
+    &__inner {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 63rem;
+       
+    }
+    .map__content {
+        position: relative;
+        &-text {
+            position: absolute;
+            top: 15rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20rem;
+            height: 10rem;
+            background: rgba(236,100,35, .8);
+            color: var(--color-white);
+            font-size: 1.6rem;
+            font-weight: 300;
+            text-align: center;
+            padding: .8rem 0;
+        }
+    }
+}

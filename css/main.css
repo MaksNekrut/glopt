@@ -312,6 +312,23 @@
         flex-basis: 15%; }
       .footer__inner-top .footer__phone-number {
         flex-basis: 15%; }
+      .footer__inner-top .footer__button button {
+        padding: 1.8rem 2.2rem;
+        background-color: var(--color-main);
+        border: none;
+        border-radius: 100px;
+        font-size: 1.4rem;
+        color: var(--color-white);
+        text-transform: uppercase; }
+      .footer__inner-top .footer__button button:focus,
+      .footer__inner-top .footer__button button:visited,
+      .footer__inner-top .footer__button button:active,
+      .footer__inner-top .footer__button button:hover {
+        outline: none;
+        background-color: var(--color-white);
+        color: var(--color-main);
+        border: none;
+        cursor: pointer; }
     .footer__inner-bottom {
       display: flex;
       flex-direction: row;
@@ -468,6 +485,30 @@
     line-height: 2.7rem;
     width: 90%;
     text-align: center; }
+
+.map {
+  background: var(--color-bg-title); }
+  .map__inner {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 63rem; }
+  .map .map__content {
+    position: relative; }
+    .map .map__content-text {
+      position: absolute;
+      top: 15rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20rem;
+      height: 10rem;
+      background: rgba(236, 100, 35, 0.8);
+      color: var(--color-white);
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-align: center;
+      padding: .8rem 0; }
 
 .price {
   background-color: var(--color-white); }
